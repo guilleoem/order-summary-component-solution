@@ -1,0 +1,166 @@
+:root {
+    /* ### Primary */
+
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    /*### Neutral */
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    background-color: var(--Pale-blue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------------------ order container ----------------*/
+
+.orderContainer {
+    background-color: white;
+    width: auto;
+    max-width: 450px;
+    border-radius: 1rem;
+    box-shadow: 0px 15px 20px -15px var(--Desaturated-blue);
+}
+
+#mainImage {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+}
+
+.order h1 {
+    color:var(--Dark-blue);
+    font-weight: 900;
+}
+
+#info {
+    color: var(--Desaturated-blue);
+    padding: 0 1rem;
+}
+
+/*----------------- subscription -----------------*/
+
+.subscriptionContainer {
+    background-color: var(--Very-pale-blue);
+    border-radius: 1rem;
+    padding: 1.4rem;
+    gap: 1.4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.planDuration {
+    color: var(--Dark-blue);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.planPrice {
+    color: var(--Desaturated-blue);
+}
+#choosePlan {
+    margin-left:auto;
+    font-size: small;
+}
+
+/*---------------------- buttons ---------------*/
+button {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--Bright-blue);
+    border: none;
+    border-radius: 0.7rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0px 20px 20px -15px var(--Desaturated-blue);
+}
+
+button:hover {
+    cursor:pointer;
+    background-color: var(--Desaturated-blue);
+}
+
+#cancel {
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+}
+
+#cancel:hover {
+    color: var(--Dark-blue);
+}
+
+/*----------------------- footer ----------------*/
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*-----------------responsive ------------------*/
+
+@media screen and (max-width:470px){
+
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+
+    .orderContainer {
+        width: 85vw;
+    }
+    
+    .order {
+        padding: 2rem;
+    }
+
+    .order h1 {
+        font-size: 1.4rem;
+    }
+
+    #info {
+        padding: 0;
+    }
+
+    .subscriptionContainer {
+        gap: 1rem;
+        padding: 1rem;
+        font-size: small;
+    }
+}
